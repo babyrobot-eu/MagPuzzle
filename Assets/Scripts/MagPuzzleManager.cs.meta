@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: db7a7373d98da2a49a3bb9b95b6e5f46
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - RuleMax4: {fileID: 1925133621373968, guid: fe3f27c9371c6f844a813c569335ab02, type: 2}
+  - RuleMax3: {instanceID: 0}
+  - RuleMax2: {fileID: 1925133621373968, guid: fe3f27c9371c6f844a813c569335ab02, type: 2}
+  - RuleConnected: {instanceID: 0}
+  - RobotIntro: {instanceID: 0}
+  - GeneralIntro: {instanceID: 0}
+  - RephraseIntro: {instanceID: 0}
+  - GeneralRule1: {instanceID: 0}
+  - GeneralRule2: {instanceID: 0}
+  - RephraseRule1: {instanceID: 0}
+  - RephraseRule2: {instanceID: 0}
+  - ClearExample: {instanceID: 0}
+  - IntroToRound1: {instanceID: 0}
+  - IntroToRound2: {instanceID: 0}
+  - IntroToRound3: {instanceID: 0}
+  - RephraseIntroRound1: {instanceID: 0}
+  - RephraseIntroRound2: {instanceID: 0}
+  - RephraseIntroRound3: {instanceID: 0}
+  - AreWeDone: {instanceID: 0}
+  - LetsLift: {instanceID: 0}
+  - WellDone: {instanceID: 0}
+  - ClearTheBoard: {instanceID: 0}
+  - Sleep: {fileID: 1925133621373968, guid: fe3f27c9371c6f844a813c569335ab02, type: 2}
+  - RoundNumberText: {instanceID: 0}
+  - MaxRuleText: {instanceID: 0}
+  - SessionCompleted: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

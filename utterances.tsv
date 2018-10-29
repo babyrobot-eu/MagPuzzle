@@ -1,0 +1,243 @@
+Speech Act	Content	Gaze Target	Emotion	Weight	Notes for Discussion
+Robot Intro	Hello {0}.  |gesture(express_happy_surprise)| Thank you for joining our experiment today. My name is Joe bot, and I'm here to cooperate with you on completing some tasks.	Player		1	
+General Intro	The first task is to place these |gaze(-0.8,-0.5,0.7)| square pieces flat on the |gaze(0,-0.4,0.6)| board, in a way that when lifted up  |gaze(0,-0.0,1.0)|  off the board, will form a perfect cube with 6 sides. <break strength="strong"/> Do you understand?	Player		1	
+Rephrase Intro	The objective of the task is to assemble a perfect 6 sided cube with the square pieces, positioning them flat on the board. <break strength="medium"/> When the pieces are lifted up, you will have the 3D cube.  <break strength="strong"/> Is it clear now?	Player		1	
+General Rule 1	Let's start by learning the rules for this task. <break strength="strong"/> The first rule is that all the pieces have to be placed flat on top of the printed squares on the board. <break strength="strong"/> Could you please place one of the pieces in any square on the board?	Player		1	
+General Rule 2	Excellent, |gesture(smile)| <break strength="medium"/> Now, the second rule requires that all the pieces are connected to each other. There cannot be any gaps in between. <break strength="medium"/> Can you connect another piece to the one you placed before? <break strength="medium"/> You should hear a click when doing it.	Player		1	
+Clear Example	Perfect. |gesture(smile)| Now. Please clear the board, so that we can start with our first round.	Player		1	
+Rephrase Rule 1	Please put one piece flat on the board.	Player		1	
+Rephrase Rule 1	The first rule requires that the pieces are placed flat on top of the printed squares on the board. Could you please place one of the pieces on the board?	Player		1	
+Rephrase Rule 2	Please put a second piece on the board connected to the previous one.	Player		1	
+Rephrase Rule 2	Please place a piece on the board. When placing new pieces on the board they must be connected to each other and you should hear a click.	Player		1	
+Game Start	Great, |gesture(smile)| let's begin.  Please start assembling the cube with the square pieces. 	Player		1	This is a new dialogue act, not in the drop down menu.
+Game Start	Good. |gesture(smile)| Please begin arranging the cube on the board.	Player		1	
+Game Start	Excellent. |gesture(smile)|  You can start arranging the pieces on the board.	Player		1	
+Intro to Round 1	Good. We will do three rounds of this activity with a different restriction in every round. <break strength="medium"/> In this round, we must use 4 squares in a line. Do you understand?	Player		1	1
+Intro to Round 2	OK, now we are going to move on to the next round. <break strength="strong"/> In this round, we can only have a maximum of 3 squares in line. Are you ready?	Player		1	This is a new dialogue act, not in the drop down menu.
+Intro to Round 3	Let's move on to round 3. <break strength="strong"/> In this round, there can not be more than 2 squares in line. Do you understand?	Player		1	
+Rephrase Intro Round 1	In the first round we should use 4 pieces in line.	Player		1	
+Rephrase Intro Round 1	For this round, we must use 4 squares in line.	Player		1	
+Rephrase Intro Round 2	In this second round, we must use at least 3 squares in line, but not more.	Player		1	
+Rephrase Intro Round 3	For this last round, we can only have a maximum of 2 squares in line.	Player		1	
+Compliment	You're doing great, {0}.	Player	emotion_happy	1	How often should we say user's name?  5-10%
+Reassurance	I believe |gesture(smile)| in you.	Player	emotion_happy	1	
+Reassurance	You can |gesture(express_happy_surprise)| do this.	Player	emotion_happy	1	
+Compliment	I think you are definitely on the right path!	Player	emotion_happy	1	
+Compliment	You've |gesture(smile)| got this, {0}!	Player		1	
+Good Quadrant	I think you are looking at the right place.	Quadrant		1	
+Good Quadrant	That seems like the right direction.	Quadrant		1	
+Good Quadrant	You are looking at the right place.	Quadrant		1	
+Good Quadrant	Focusing on this area should bring us closer to a solution.	Quadrant	emotion_happy	1	
+Good Quadrant	I would also place a piece in this section.	Quadrant		1	
+Good Quadrant	I believe you are focusing on the right place.	Quadrant		1	
+Good Quadrant	I think this is the |gesture(smile)| right area.	Quadrant		1	
+Good Quadrant	Focusing on this area makes sense.	Quadrant		1	
+Bad Quadrant	This does not seem like a good area to focus on.	Quadrant		1	
+Bad Quadrant	I would not look |gesture(express_sad)| at that side of the board.	Quadrant		1	
+Bad Quadrant	Placing a piece here |gesture(express_confused)| probably will not help us.	Quadrant		1	
+Bad Quadrant	Focusing on this area is not likely to bring us closer to a solution.	Quadrant		1	
+Bad Quadrant	I would not move a piece to that side of the board.	Quadrant		1	
+Bad Quadrant	I would not look over there for  a solution.	Quadrant		1	
+Bad Quadrant	I think you should look somewhere else! This area does not seem right!	Quadrant		1	
+Bad Quadrant	Moving a piece to this area will probably not bring us closer to a solution.	Quadrant		1	
+Bad Quadrant	|gesture(shake)|	Quadrant	emotion_sad	1	
+Good	Yes, I agree. This move appears correct.	Square		1	Should robot always be certain? As in; 'This move is correct', not 'This move appears correct'
+Good	Well done! |gesture(express_happy_surprise)| This move looks good.	Player		1	
+Good	This move was very smart!	Player	emotion_happy	1	
+Good	I could not have thought |gesture(express_happy_surprise)|of a better move myself!	Player		1	
+Good	That move makes a lot of sense!	Player	emotion_happy	1	
+Good	I think this move was the right decision.	Player		1	
+Good	Awesome |gesture(starstruck)| move, {0}.	Player		1	
+Good	Good move. 	Player	emotion_excited	1	
+Good	|gesture(nod)|	Player		1	
+Yes	yes, I agree.	Player	emotion_happy	1	
+Yes	Yep!	Player	emotion_excited	1	
+Yes	cool |gesture(nod)|	Player		1	
+Yes	okay	Player		1	
+Reassurance	Don't worry	Player		1	Hi {0}, how are you doing
+Reassurance	You can |gesture(smile)| do it.	Player		1	Hi |gesture(smile)| how are you doing?
+Compliment	You are doing fine!	Player	emotion_excited	1	
+Reassurance	I am sure we will find the solution.	Player		1	
+Compliment	i think you  |gesture(express_happy_surprise)| are doing great!	Player		1	
+Compliment	You have got this!	Player	emotion_excited	1	
+Reassurance	I am confident that we will find a solution very soon.	Player		1	
+Reassurance	I believe that you |gesture(smile)|  are going to nail this.	Player		1	
+Reassurance	This is a super  |gesture(brow_frown)| tricky task.	Player		1	
+Reassurance	It is not so  |gesture(thoughtful)|easy to find a solution for this task.	Player		1	
+Reassurance	This task looks |gesture(express_sad)| easier, than it  is.	Player		1	
+Reassurance	I think it normally takes a a bit of time to solve this task.	Player		1	
+Reassurance	It really is |gesture(thoughtful)| a hard task.	Player		1	
+Bad Last Move	I don't think this move would lead to a correct solution.	Square	emotion_concerned	1	Robot again not 'certain' here. Using 'I don't think...'.  Sould robot be certain? 
+Wrong Arrangement	|gesture(Frown)|	Square		1	
+Bad Last Move	I would |gesture(express_confused)| reconsider this move.	Square		1	
+Bad Last Move	That move will probably not bring us |gesture(thoughtful)| closer to a solution.	Square	emotion_sad	1	
+Bad Color	The {1} piece here is not likely to help to find the solution.	Square	emotion_concerned	1	
+Bad Last Move	No, I do not think so. |gesture(express_confused)| This move does not seem like a good choice.	Square	emotion_concerned	1	
+Bad Last Move	This move does |gesture(brow_frown)| not make much sense.	Square		1	
+Bad Last Move	I think this move could have been better.	Square	emotion_sad	1	
+Bad Last Move	This move really does not seem correct!	Square	emotion_concerned	1	
+Bad Color	I think that {1} piece is |gesture(express_confused)| wrong there. 	Square		1	
+No	No	Player		1	
+No	No  |gesture(brow_frown)| way.	Player		1	
+No	I do |gesture(brow_frown)| not think so.	Player		1	
+No	I do  |gesture(express_sad)| not agree	Player		1	
+Bad Last Move	Are you sure you want to do that?	Player		1	
+Wrong Arrangement	Are you positive that this is a good idea ?	Player	emotion_skeptical	1	
+Wrong Arrangement	Are you |gesture(express_skeptical)| sure you have thought this through completely ?	Player		1	
+Bad Last Move	Are you 100 percent sure that you wanna do this ?	Player	emotion_skeptical	1	
+Wrong Arrangement	Are you |gesture(express_skeptical)| really sure ?	Player		1	
+Bad Last Move	Are you really |gesture(thoughtful)| sure that this will lead us closer to finding a solution ?	Player		1	
+Bad Last Move	Do you think  |gesture(thoughtful)| that is the correct move?	Player		1	
+Bad Last Move	Are you sure you do |gesture(express_skeptical)| not want to rethink that move ?	Player		1	
+Bad Last Move	Do you think we will be  |gesture(thoughtful)| able to find a solution after that move?	Player		1	
+Hint Incorrect	With this constelation we will not be able to have four walls	Square		1	I thought we agreed on 'arrangement', or do you prefer 'arrangement'?
+Hint Incorrect	This arrangement does not really look correct.	Square		1	
+Hint Incorrect	I think it will be  |gesture(thoughtful)| difficult to come to a solution with this arrangement.	Square		1	
+Hint Incorrect	It seems like you will have to move some pieces in order to arrive at a correct arrangement.	Square		1	
+Hint Incorrect	With this arrangement we will probably not be able to assemble the cube.	Square		1	
+Wrong Arrangement	I'm afraid this constelation will not form a cube.  <break strength="medium"/> Try to imagine which of these pieces will be the walls.	Player		1	
+Wrong Arrangement	This arrangement |gesture(express_sad)| will not result in a cube.	Player		1	
+Wrong Arrangement	I don't think so. |gesture(thoughtful)| Remember we will need to build 4 walls, a floor and a roof.	Player		1	
+Remind Objective	Remember we will need to build 4 walls a roof and a floor.	Player		1	
+Remind Objective	Try to imagine which of these pieces will be the walls.	Player		1	
+Remind Objective	Remember the pieces should assemble to a cube.	Player		1	
+Remind Objective	Try to imagine which of these pieces will be a roof.	Player		1	
+Remind Objective	Try to imagine this structure in 3D.	Player		1	
+Bad Color	I don't think that |gesture(thoughtful)| this {1} piece would fit here.	Square		1	
+Bad Color	This {1} piece might have a |gesture(express_sad)| better fit at a different location.	Square		1	
+Bad Color	This {1} piece might not be optimally placed at this location.	Square		1	
+Bad Last Move	Maybe reconsider this move.	Square		1	
+Bad Last Move	I don't think  |gesture(thoughtful)| placing it here would work.	Square		1	
+Good	I think this move seems correct.	Square	emotion_happy	1	
+Good	I would probably leave this {1} piece at this place.	Square		1	
+Good	I think this move makes a lot of sense.	Square		1	
+Good	I think this {1} piece might be a very good fit at this location.	Square		1	
+Good	I think this square looks promising.	Square	emotion_happy	1	
+Hint Correct	What about |gesture(brow_raise)| this location ?	Square		1	
+Hint Correct	Have you considered  |gesture(thoughtful)| this area ?	Square		1	
+Hint Correct	I think this location might be good.	Square		1	
+Hint Correct	I think moving the piece here might help.	Square		1	
+Hint Correct	You might want to look over here.	Square		1	
+Bad Last Move	The piece you just moved |gesture(express_sad)| does not seem to be in a good position.	Square		1	
+Bad	I think you will find that there is a better solution for this piece.	Square		1	
+Bad Last Move	Maybe rethink the |gesture(thoughtful)| move you just made.	Square		1	
+Bad	Maybe there is a better  |gesture(express_sad)| place for this piece ?	Square		1	
+Bad Last Move	This piece you placed before |gesture(thoughtful)| probably won't lead to a correct layout.	Square		1	
+Bad Color	I would arrange this {1} piece differently.	Square		1	
+Bad Color	I do not think that this is the right place for this  {1} piece.	Square		1	
+Bad	I would think of a different place for this piece.	Square		1	
+Bad Color	Removing this {1} piece will bring you closer to a solution.	Square		1	
+Bad	Rearanging this piece will help when assembling  the cube.	Square		1	. 
+Bad Color	I would suggest to move this {1} piece to a different location.	Square		1	
+Bad Color	I would probably remove this {1} piece.	Player		1	. 
+Probe Engagement	What do you think we should  |gesture(brow_raise)| do next?	Player		1	
+Hint Incorrect	Does this arrangement make sense?	Player		1	
+Hint Incorrect	Do you think this arrangement is optimal ?	Player	emotion_skeptical	1	
+Hint Incorrect	Maybe a different arrangement would make more sense ?	Player		1	
+Hint Incorrect	Do you think this |gesture(brow_raise)| arrangement is correct?	Player		1	
+My role	I am here to cooperate with you, to complete the tasks. 	Player		1	
+My role	My role in this task is to cooperate with you so we can complete it together. 	Player		1	
+My role	I can offer you suggestions if you want them. 	Player	emotion_happy	1	
+Probe Help	Would you like  |gesture(brow_raise)| me to make a suggestion?	Player		1	
+Probe Help	I could offer you my opinion if you'd like?	Player		1	
+Probe Help	Would you like to |gesture(brow_raise)|  know what I think?	Player		1	
+Probe Engagement	I haven't heard from you in a while, are you still thinking?	Player		1	
+Rule Max2	We can only have a maximum of 2 in line in this round.	Player		1	
+Rule Max2	Remember {0}, in this round, we can only have a maximum of 2 in a line.	Player		1	
+Rule Max2	Remember the instructions, in this round we can only have 2 pieces in a line.	Player		1	
+Rule Max3	We must have at least 3 in a line, but not more.	Player		1	
+Rule Max3	Remember {0}, in this round, we must have 3 in a line as part of our arrangement, but not more.	Player		1	
+Rule Max3	Remember the instructions, in this round we must have 3 pieces in a line, but not more.	Player		1	
+Rule Max4	Remember {0}, we must have 4 in a line in this round.	Player		1	
+Rule Max4	Remember, in this round, we must use 4 squares in a line.	Player		1	
+Rule Max4	Remember the instructions, in this round we must have 4 pieces in a line.	Player		1	
+Rule Connected	The pieces have to be connected.	Square		1	
+Rule Connected	Remember, the rule is, the pieces have to be connected.	Square		1	
+Rule Connected	Please remember the rules, all pieces must be connected. 	Square		1	
+Not understanding	I don't understand.	Player	emotion_skeptical	1	
+Not understanding	Could you rephrase that please.	Player		1	
+Not understanding	I don't think I followed what you said.	Player	emotion_skeptical	1	
+Not understanding	I didn't understand, {0} could you say that again?	Player		1	
+Not understanding	I'm not sure I understood you, could you please repeat it?	Player		1	
+Not understanding	Sometimes I'm not able to process everything you say correctly, would you mind repeating that?	Player		1	Do we allow the robot to 'explain' it's failures? 
+Not understanding	Can you please repeat that?	Player	brow_up	1	
+Not my role	That is not my role in this task.	Player		1	
+Not my role	I can't help you with that, I can only help us find a solution to this task.	Player		1	
+Not my role	I don't know how to do that, but I can help figure out how to complete the cube.	Player		1	
+Not my role	I can only offer suggestions and encouragement, and tell you when I think you might have made a wrong move.	Player		1	
+Sorry	Sorry.	Player		1	
+Sorry	I'm sorry, {0}.	Player		1	
+Sorry	My apologies.	Player		1	
+Yes	Yes.	Player		1	
+Yes	Absolutely.	Player		1	
+Yes	For sure.	Player		1	
+Yes	Correct.	Player		1	
+Yes	Yes indeed, {0}.	Player		1	
+No	No.	Player		1	
+No	Actually |gesture(brow_frown)| no.	Player		1	
+No	Sorry, no. 	Player		1	
+No	No, {0}.	Player		1	
+Cannnot confirm	I cannot confirm that	Player		1	
+Clear the board	Please clear the pieces from the board.	Player		1	
+Clear the board	Could you remove all the pieces |gaze(-0.8,-0.5,0.7)| from the board?	Player		1	
+Clear the board	Please clear the board so that we can begin. 	Player		1	
+Clear the board	Please put all the square pieces |gaze(-0.8,-0.5,0.7)| back on  the side of the board. |gaze(0,-0.0,1.0)| 	Player		1	Gaze to piece box on side, then back to player.
+We have successfully completed all the tasks for today.  I think we did a great job, don't you? The researcher will now ask you to fill out some questionnaires. It was a pleasure cooperating with you, {0}.  Enjoy the rest of your day.	We have successfully completed all the tasks for today.  I think we did a great job, don't you? The researcher will now take you in the other room to fill out some questionnaires. It was a pleasure cooperating with you, {0}.  Enjoy the rest of your day.	Player	emotion_happy	1	We can intentionally induce social presence/rapport here - if we want to.  For example, 'I really hope we will get to work together again in the future'.
+Shall we start	Shall we start?	Player	emotion_skeptical	1	
+Shall we continue	Shall we continue?	Player	emotion_skeptical	1	
+Backchannels	|gesture(brow_frown)| uhm	Player		1	
+Backchannels	er,	Player		1	
+Backchannels	uh huh	Player		1	
+Backchannels	well,	Player		1	
+Backchannels	uh	Player		1	
+Backchannels	|gesture(brow_frown)| uhm,	Player		1	
+Backchannels	|gesture(brow_frown)| err,	Player		1	
+OK	OK	Player		1	
+OK	Alright.	Player		1	
+OK	OK then.	Player		1	
+OK	<prosody rate="x-slow"> OK </prosody>	Player		1	
+OK	Alright then.	Player		1	
+OK	Sure.	Player		1	
+OK	<prosody rate="x-fast"> OK </prosody>	Player		1	
+OK	Fine.	Player		1	
+Are we done	I think |gesture(starstruck)| we've got it, don't you?	Player		1	
+Are we done	I think that will |gesture(express_excitement)| make a cube, do you agree?	Player		1	
+Are we done	That looks like we've |gesture(starstruck)| got it, what do you say? 	Player		1	
+Let's lift	Go ahead and gently |gaze(0,-0.4,0.6)| lift it into 3D  |gaze(0,-0.0,1.0)| to see if we are right.	Player		1	
+Let's lift	You can |gaze(0,-0.4,0.6)| lift it up and see if it |gaze(0,-0.0,1.0)| really does make a cube.	Player		1	
+Let's lift	Please |gaze(0,-0.4,0.6)| lift it slowly off the board |gaze(0,-0.0,1.0)| and see if it folds into a cube.	Player		1	
+Well done	|gesture(express_happy_surprise)| Excellent job, {0}.  	Player		1	
+Well done	Well done, {0}. 	Player		1	
+Well done	|gesture(express_excitement)| Great job, {0}. 	Player		1	
+Tech Restart	I'm sorry, {0}, but one of my sensors is malfunctioning.  Can you please wait a moment while I attempt to restart it?	Player		1	Tech restart, split up long utterances to give user response time, wizzard can look at camera feed in between rounds
+Restart Round	Can we please start this round over again?	Player		1	
+Great	Great. |gesture(smile_big)|	Player	emotion_happy	1	
+Great	Super.	Player		1	
+Great	Great |gesture(express_happy_surprise)|	Player		1	
+Great	Awesome. |gesture(starstruck)|	Player		1	
+Great	Great |gesture(smile)|	Player		1	
+Thank you	Thank you. |gesture(smile)|	Player		1	
+Thank you	Thanks. |gesture(smile)|	Player		1	
+I'm thinking	Let me think  |gaze(-0.8,-0.0,0.5)| about that.	Player	emotion_skeptical	1	
+I'm thinking	Let's see.  |gaze(0.8,-0.0,0.5)|	Player	emotion_concerned	1	Disassemble pieces for clear board
+I'm thinking	Good question. Let me think. |gaze(0.2,0.9,0.5)|	Player	emotion_bored	1	
+Ponder	<sig amplitude='0.4'><spurt audio="chess_dialogue/hm_hesitation_01"></spurt> </sig>	Quadrant	emotion_concerned	1	
+Ponder	<sig amplitude='0.4'><spurt audio="chess_dialogue/ok_uncertain_02">ok</spurt> </sig>	Quadrant	emotion_skeptical	1	
+Ponder	<sig amplitude='0.4'><spurt audio="chess_dialogue/m_disagree_01"></spurt> </sig>	Quadrant	emotion_bored	1	
+Ponder	<sig amplitude='0.4'><spurt audio="chess_dialogue/hm_uncertain_01"></spurt> </sig>	Quadrant	emotion_confused	1	
+Ponder	<sig amplitude='0.4'><spurt audio="chess_dialogue/ehm_filler_01">ehm</spurt> </sig>	Quadrant	emotion_concerned	1	
+Ponder	<sig amplitude='0.4'><spurt audio="extra_script1/mm._okey_uncertain_1">m, ok</spurt> </sig>	Quadrant	emotion_confused	1	
+Ponder	<sig amplitude='0.4'><spurt audio="free_dialogue/ehm_hesitation_06">ehm</spurt> </sig>	Quadrant	emotion_bored	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/ah_unc_2">ah</spurt> </sig>	Quadrant	emotion_fear	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/mhm_unc_1"></spurt> </sig>	Quadrant	emotion_skeptical	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/mm_dis_2"></spurt> </sig>	Quadrant	brow_up	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/yeah_dis_1">yeah</spurt> </sig>	Quadrant	emotion_bored	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/yes_dis_3">yes</spurt> </sig>	Quadrant	emotion_concerned	1	
+Ponder	<sig amplitude='0.4'><spurt audio="script1/nhn_dis_2"></spurt> </sig>	Quadrant	emotion_skeptical	1	
+My name is	My name is Joe bot.	Player	emotion_happy	1	
+My name is	My name is bot. Joe bot.	Player	emotion_happy	1	
+My name is	As I mentioned earlier, my name is Joe bot. 	Player		1	
+My name is	Well, {0}, my name is Joe bot. 	Player		1	
+Action 1	This is to exemplify executing a behavior 	Player	emotion_concerned	1	
+Action 1	Variation of exemplifying	Player	emotion_concerned	1	
+Action 1	Variation of exemplifying 2	Player	emotion_concerned	1	
