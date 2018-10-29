@@ -1,10 +1,12 @@
 # Wizard Interface
-The wizard interface was created in [Unity3D](https://unity3d.com/) and the C# programming language is used for most of the scripting in the project.
+The wizard interface was created in [Unity3D](https://unity3d.com/) and C# is used for most of the scripting in the project.
 
 ## GameObjects
-[GameObjects](https://docs.unity3d.com/ScriptReference/GameObject.html) are the baseclass for all objects in Unity3D and we used them to organize and divide our project.
+[GameObjects](https://docs.unity3d.com/ScriptReference/GameObject.html) are the baseclass for all objects in Unity3D and we use them to organize and divide our project.
 
 ### Speech Recognition
+The speech recognition GameObject initializes the [SpeechRecognition.cs](Assets/Scripts/SpeechRecognition.cs) class.
+
 ### Logging
 ### Furhat Robot
 ### ARToolkit
