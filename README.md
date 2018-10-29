@@ -1,4 +1,4 @@
-![MagPuzzle Scenario Picture](DocsImages\logoBabyRobot.png)
+![MagPuzzle Scenario Picture](logoBabyRobot.png)
 
 This application was devoloped for the use case 1 of the [Baby Robot EU Project, grant number: 687831](http://babyrobot.eu/).
 
