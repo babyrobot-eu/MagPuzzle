@@ -47,7 +47,7 @@ public class SpeechRecognition : MonoBehaviour {
             if (!waitingForFinalResult)
             {
                 waitingForFinalResult = true;
-                AutoGazeBehavior.Instance?.EventUserStartedSpeaking();
+                AutonomousGazeBehavior.Instance?.EventUserStartedSpeaking();
             }
             Dbg.Log(LogMessageType.SPEECH_REC_HYPOTHESIS, text);
             if (m_speechBox)

@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 5796949}
   - component: {fileID: 5796950}
   m_Layer: 0
-  m_Name: Furhat Robot
+  m_Name: Robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,11 +911,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1803393338}
-  - {fileID: 1480314536}
   - {fileID: 240066724}
   - {fileID: 497136401}
+  - {fileID: 1480314536}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1696,7 +1696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &210045674
 MonoBehaviour:
@@ -2165,7 +2165,7 @@ Transform:
   - {fileID: 1199350359}
   - {fileID: 242139862}
   m_Father: {fileID: 101272109}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &240066725
 MonoBehaviour:
@@ -3521,7 +3521,7 @@ Transform:
   - {fileID: 2026811056}
   - {fileID: 1623244320}
   m_Father: {fileID: 101272109}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &497136402
 MonoBehaviour:
@@ -4649,7 +4649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!83 &695120103
 AudioClip:
@@ -9066,7 +9066,7 @@ GameObject:
   - component: {fileID: 1285034163}
   - component: {fileID: 1285034162}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Interface Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9142,7 +9142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285377888 stripped
 GameObject:
@@ -12067,7 +12067,7 @@ Transform:
   m_LocalScale: {x: 107.99103, y: 107.99103, z: 107.99103}
   m_Children: []
   m_Father: {fileID: 101272109}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1487384147
 PrefabInstance:
@@ -14410,7 +14410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803393338}
   m_Layer: 5
-  m_Name: Game Board
+  m_Name: Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14786,7 +14786,7 @@ RectTransform:
   m_LocalScale: {x: 0.009261536, y: 0.009261536, z: 0.009261536}
   m_Children: []
   m_Father: {fileID: 2026811056}
-  m_RootOrder: 34
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15757,7 +15757,7 @@ Transform:
   m_Children:
   - {fileID: 333915886}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1878058272
 MonoBehaviour:
@@ -17068,6 +17068,7 @@ Transform:
   - {fileID: 1315988058}
   - {fileID: 1621035855}
   - {fileID: 1058541350}
+  - {fileID: 1827382351}
   - {fileID: 271048794}
   - {fileID: 275476591}
   - {fileID: 1359906510}
@@ -17076,9 +17077,8 @@ Transform:
   - {fileID: 533514210}
   - {fileID: 702611799}
   - {fileID: 1310385971}
-  - {fileID: 947571646}
-  - {fileID: 1827382351}
   - {fileID: 2146641953}
+  - {fileID: 947571646}
   - {fileID: 700401916}
   - {fileID: 1922067695}
   - {fileID: 86368637}
@@ -17723,7 +17723,7 @@ RectTransform:
   m_LocalScale: {x: 0.009261607, y: 0.009261607, z: 0.009261536}
   m_Children: []
   m_Father: {fileID: 2026811056}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

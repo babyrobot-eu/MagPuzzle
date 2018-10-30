@@ -58,7 +58,7 @@ public class Furhat : MonoBehaviour
     {
         Asleeep = false;
         furhat.Gesture(GESTURES.MOVING.WAKE_UP);
-        AutoGazeBehavior.Instance.GazeAtUserStartInteraction();
+        AutonomousGazeBehavior.Instance.GazeAtUserStartInteraction();
     }
 
     internal void FallAsleep()
@@ -188,7 +188,7 @@ public class Furhat : MonoBehaviour
     {
         SpeechRecognition.Instance.StartSpeechRecognition();
         clearRobotText = true;
-        AutoGazeBehavior.Instance.RobotStoppedDialogAct();
+        AutonomousGazeBehavior.Instance.RobotStoppedDialogAct();
         robotInDialogAct = false;
         Dbg.Log(LogMessageType.DIALOG_ACT, "END_OF_UTTERANCE");
     }

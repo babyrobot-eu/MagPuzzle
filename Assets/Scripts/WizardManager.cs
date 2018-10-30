@@ -338,7 +338,7 @@ public class WizardManager : MonoBehaviour {
         if (color != PieceColor.None)
         {
             pieces[index].Item1.enabled = true;
-            AutoGazeBehavior.Instance?.EventPieceMoved(nameOfSquare);
+            AutonomousGazeBehavior.Instance?.EventPieceMoved(nameOfSquare);
         }
         else pieces[index].Item1.enabled = false;
         if (color == PieceColor.None)
@@ -373,9 +373,9 @@ public class WizardManager : MonoBehaviour {
     {
         if (!Furhat.Instance.robotInDialogAct)
         {
-            AutoGazeBehavior.Instance.BlockedFromLookingAtTheBoard = true;
+            AutonomousGazeBehavior.Instance.BlockedFromLookingAtTheBoard = true;
             Furhat.Instance.robotInDialogAct = true;
-            AutoGazeBehavior.Instance.DialogChoicePiece(name);
+            AutonomousGazeBehavior.Instance.DialogChoicePiece(name);
 
             string dialogActText = Behaviors.Instance.SayRandomString(text);
             Dbg.Log(LogMessageType.DIALOG_ACT, new List<string>() {DialogType.Piece.ToString(), name, text, dialogActText});
@@ -389,24 +389,24 @@ public class WizardManager : MonoBehaviour {
             return;
         if (!Furhat.Instance.robotInDialogAct)
         {
-            AutoGazeBehavior.Instance.BlockedFromLookingAtTheBoard = false;
+            AutonomousGazeBehavior.Instance.BlockedFromLookingAtTheBoard = false;
             Furhat.Instance.robotInDialogAct = true;
             string dialogActText = Behaviors.Instance.SayRandomString(text);
             if (dialogActText.Contains("gaze("))
-                AutoGazeBehavior.Instance.DialogChoicePlayer(false);
-            else AutoGazeBehavior.Instance.DialogChoicePlayer(true);
+                AutonomousGazeBehavior.Instance.DialogChoicePlayer(false);
+            else AutonomousGazeBehavior.Instance.DialogChoicePlayer(true);
             Dbg.Log(LogMessageType.DIALOG_ACT, new List<string>() { DialogType.Player.ToString(), Settings.Instance.ParticipantName.text, text, dialogActText });
         }
     }
 
     public void RepeatLastUtterance()
     {
-        AutoGazeBehavior.Instance.BlockedFromLookingAtTheBoard = false;
+        AutonomousGazeBehavior.Instance.BlockedFromLookingAtTheBoard = false;
         Furhat.Instance.robotInDialogAct = true;
         Furhat.Instance.say(LastUtteranceVocalized, "");
         if (LastUtteranceVocalized.Contains("gaze("))
-            AutoGazeBehavior.Instance.DialogChoicePlayer(false);
-        else AutoGazeBehavior.Instance.DialogChoicePlayer(true);
+            AutonomousGazeBehavior.Instance.DialogChoicePlayer(false);
+        else AutonomousGazeBehavior.Instance.DialogChoicePlayer(true);
         Dbg.Log(LogMessageType.DIALOG_ACT, new List<string>() { "REPEAT_LAST_UTTERANCE", LastUtteranceVocalized });
     }
 

@@ -5,7 +5,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Gaze : MonoBehaviour {
+public class GazeDrawing : MonoBehaviour {
 
     //car to store mouse position on the screen
     private Vector3 mousePos;

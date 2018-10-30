@@ -9,10 +9,10 @@ using UnityEngine;
 public enum GazeState {ROBOT_DISTRACTED, ROBOT_LOOKING_AT_PLAYER, ROBOT_LOOKING_AT_QUADRANT, EVENT_PLAYER_STARTED_SPEAKING, EVENT_PIECE_MOVED, EVENT_PLAYER_LOOKING_AT_QUADRANT, EVENT_PLAYER_LOOKING_AT_ROBOT, DIALOG_ACT, WAITING_AFTER_SQUARE_DIALOG_ACT };
 public enum Priority { Highest = 5, High = 4, Medium = 3, Low = 2, Lowest = 1, None = 0}
 
-class AutoGazeBehavior : MonoBehaviour
+class AutonomousGazeBehavior : MonoBehaviour
 {
     Furhat furhat;
-    Gaze furhatInterfaceGaze;
+    GazeDrawing furhatInterfaceGaze;
     private GameObject PlayerGazeTarget;
     private GameObject DistractedGazeTarget;
 
@@ -55,7 +55,7 @@ class AutoGazeBehavior : MonoBehaviour
     private Dictionary<GazeState, Priority> Priorities = new Dictionary<GazeState, Priority>();
     private GazeState currentGazeTarget;
 
-    public static AutoGazeBehavior Instance;
+    public static AutonomousGazeBehavior Instance;
 
     //private IEnumerator blinkingCoroutine;
     private Coroutine blinkCoroutine;
@@ -298,7 +298,7 @@ class AutoGazeBehavior : MonoBehaviour
     private void Start()
     {
         playerPosition = new Vector3(0, 0, 1);
-        furhatInterfaceGaze = transform.GetComponent<Gaze>();
+        furhatInterfaceGaze = transform.GetComponent<GazeDrawing>();
         furhat = Furhat.Instance;
         PlayerGazeTarget = GameObject.Find("Player");
         DistractedGazeTarget = GameObject.Find("DistractedImageRobot");

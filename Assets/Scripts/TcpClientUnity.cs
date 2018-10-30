@@ -22,7 +22,7 @@ public class TcpClientUnity : MonoBehaviour {
     //port for the server, make sure to unblock this in your router firewall if you want to allow external connections
     public int conPort = 8081;
 
-    Gaze gaze;
+    GazeDrawing gaze;
     TcpClient mySocket;
     NetworkStream theStream;
     StreamWriter theWriter;
@@ -67,7 +67,7 @@ public class TcpClientUnity : MonoBehaviour {
         if (updateGazeTarget)
         {
             gaze.SetGazeToQuadrant(gazeTarget);
-            AutoGazeBehavior.Instance.EventUserLookingAtQuadrantOrPlayer(gazeTarget);
+            AutonomousGazeBehavior.Instance.EventUserLookingAtQuadrantOrPlayer(gazeTarget);
             updateGazeTarget = false;
         }
     }
@@ -76,7 +76,7 @@ public class TcpClientUnity : MonoBehaviour {
 
     private void Start()
     {
-        gaze = GetComponent<Gaze>();
+        gaze = GetComponent<GazeDrawing>();
         changeTextBox(false);
         SocketThread = new Thread(setupSocket);
         SocketThread.IsBackground = true;
@@ -148,7 +148,7 @@ public class TcpClientUnity : MonoBehaviour {
                         string[] userLocation = message[1].Split(',');
                         float z = float.Parse(userLocation[2]);
 
-                        AutoGazeBehavior.Instance.UpdatePlayerPosition(new Vector3(float.Parse(userLocation[0]), float.Parse(userLocation[1]), z));
+                        AutonomousGazeBehavior.Instance.UpdatePlayerPosition(new Vector3(float.Parse(userLocation[0]), float.Parse(userLocation[1]), z));
                         if (message[0] == "Unknown")
                         {
                             if (!lastMessageIsUnknown)

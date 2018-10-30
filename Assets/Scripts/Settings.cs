@@ -52,7 +52,7 @@ public class Settings : MonoBehaviour {
 
     public void SetupGazeLines(bool disabled)
     {
-        var buttons = FindObjectsOfType<Gaze>();
+        var buttons = FindObjectsOfType<GazeDrawing>();
         foreach (var item in buttons)
         {
             item.SetupGazeLines(disabled);
@@ -92,7 +92,7 @@ public class Settings : MonoBehaviour {
         LeftCondition.interactable = true;
         RightCondition.interactable = true;
         Accept.interactable = true;
-        Gaze.DisableQuandrantImages();
+        GazeDrawing.DisableQuandrantImages();
     }
 
     public void shiftConditionLeft()
