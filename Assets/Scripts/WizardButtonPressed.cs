@@ -41,7 +41,10 @@ public class WizardButtonPressed : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         string text = GetComponentInChildren<Text>().text;
         WizardManager wm = GameObject.Find("WizardManagement").GetComponent<WizardManager>();
-        MagPuzzleManager.Instance.ButtonPressed(this.gameObject);
+
+        //Check if we want to hide options
+        ReduceCognitiveLoad.Instance.ButtonPressed(this.gameObject);
+
         if (text == "Repeat")
         {
             wm.RepeatLastUtterance();

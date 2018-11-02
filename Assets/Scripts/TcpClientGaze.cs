@@ -8,7 +8,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TcpClientUnity : MonoBehaviour {
+public class TcpClientGaze : MonoBehaviour {
 
     public enum TypeOfTCPConnection { Gaze, Speech }
 

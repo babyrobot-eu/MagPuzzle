@@ -9,6 +9,8 @@ using UnityEngine.Windows.Speech;
 public enum PieceSquares { A1 = 0, A2 = 1, A3 = 2, A4 = 3, B1 = 4, B2 = 5, B3 = 6, B4 = 7, C1 = 8, C2 = 9, C3 = 10, C4 = 11, D1 = 12, D2 = 13, D3 = 14, D4 = 15}
 
 
+public enum MagPuzzleGameState { InitialRound, Max4Round, Max3Round, Max2Round }
+
 public class PieceInfo
 {
     public DateTime dateTime;
@@ -355,7 +357,7 @@ public class WizardManager : MonoBehaviour {
         //Matrix4x4 matrix4X4 = new Matrix4x4(firstColumn, secondColumn, thirdColumn, fourthColumn);
 
         ////Send it to the class responsible for managing buttons regarding the pieces
-        MagPuzzleManager.Instance.BoardStateUpdated(GetBoardState());
+        ReduceCognitiveLoad.Instance.BoardStateUpdated(GetBoardState());
     }
 
     public bool [] GetBoardState()

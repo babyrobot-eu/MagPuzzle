@@ -65,7 +65,7 @@ public class Settings : MonoBehaviour {
         {
             Dbg.Instance.CreateLoggingFile(ParticipantName.text, Condition.ToString());
             //EnableWizardButtons(true);
-            MagPuzzleManager.Instance.NewSession();
+            ReduceCognitiveLoad.Instance.NewSession();
             SetupGazeLines(Condition == JointAttentionCondition.Control ? true : false);
             GetComponent<AudioSource>().Play();
             Furhat.Instance?.WakeUP();

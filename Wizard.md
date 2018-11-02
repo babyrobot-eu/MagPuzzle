@@ -17,36 +17,37 @@ The ARToolkit game object starts the ARController and several ARMarker scripts d
 ### Robot
 The Robot game object starts 4 different scripts. 
 - A [gazeDrawing.cs](Assets/Scripts/GazeDrawing.cs) script used to draw two lines from the robot's eyes to the point in the interaction where the robot is looking at. 
-- A [Behaviors.cs](Assets/Scripts/Behaviors.cs) script that reads a tsv data file and can generate random (optimized for decreased repeatability) behaviors. 
-- A [Furhat.cs](Assets/Scripts/Furhat.cs) .net library that allows us to communicate with the [Furhat robot](http://www.furhatrobotics.com) inside Unity3D, [click here for more details](Furhat.md). 
+- A [Behaviors.cs](Assets/Scripts/Behaviors.cs) script that reads a data file and can generate random (optimized for decreased repeatability) behaviors. To edit the robot's behavior in each dialog act, one should edit the [utterances.tsv](utterances.tsv) file, a tab separated file that can be easily authored to change the robot's behaviors. Our dialog act implementation allows for a mix of verbal and non-verbal content in a format that is compact for authoring. It starts by vocalizing and lip-syncing the text but also supports additional commands that can be synchronized in the middle of the content such as gaze changes, gestures, pauses or pitch, and volume changes. A simple notation for variable replacement also allows the authored content to contain dynamic interaction information such as the user's name or the current referred-to piece color. Each content entry can also be associated with a facial blendshape (Mood) that changes the robot's underlying facial expression throughout the entire length. Finally, behaviors are also associated with a gaze target that affects the autonomous gaze behavior. Please consult the utterances file to learn more about its structure.
 - A [AutonomousGazeBehavior.cs](Assets/Scripts/AutonomousGazeBehavior.cs) script used to generate autonomous responsive gaze behavior for the robot, [click here for more details](ResponsiveGaze.md).
+- A [Furhat.cs](Assets/Scripts/Furhat.cs) .net library that allows us to communicate with the [Furhat robot](http://www.furhatrobotics.com) inside Unity3D, [click here for more details](Furhat.md). This .net dll library communicates with IRISTK and extends Furhat's robot functionality and facilitates communication with Furhat within a C# environment. To use the library set the robot to passive mode and provide the correct IP address in the Inspector. In the inspector you can also set the distance between Furhat and each square on the board so that Furhat can look at the right point in space.  
 
 ### Main Camera
 This gameobject contains the [Unity3D camera](https://docs.unity3d.com/ScriptReference/Camera.html) used for displaying the user interface in a secondary display. The main display is reserved for the ARToolkit camera. As such, to run this project you will require 2 different monitors (with a recommended resolution of 1080p).
 
 ### Canvas
-This [game object](https://docs.unity3d.com/Manual/UICanvas.html) defines an area where all the interface elements are drawn. To facilitate organization we created different child game objects for each part of the interface.
+This [game object](https://docs.unity3d.com/Manual/UICanvas.html) defines an area where all the interface elements are drawn. To facilitate organization, we created different child game objects for each part of the interface. 
 
 #### Multimodal Perception
-This game object contains several images that represent all the multimodal information captured by the system that can be perceived by the wizard. This information consists of the player's and robot's action and the MagPuzzle pieces. As such we divided it further into a RobotUI game object, a PlayerUI game object and several game objects for the squares on the board that represent the physical pieces.
+This game object draws in the interface all the multimodal information that is captured by the system and that can be perceived by the wizard. This information consists of the player's and robot's action and the MagPuzzle pieces. We divided it further into a **RobotUI** game object, a **PlayerUI** game object and a **Board** game object.
 
-- Associated with the RobotUI and PlayerUI game objects there are two interface elements that are controlled by other external scripts: line renderers that represent the gaze direction and a chatbox that represents the text of what the user or the robot is currently vocalizing.
+- Associated with the **RobotUI** and **PlayerUI** game objects there are two interface elements that are controlled by external scripts: line renderers that represent gaze direction; and a chatbox that represents the text of what the user or the robot is currently saying.
 
-- A squares game object
+- The **Board** game object contains several images that represent the physical pieces, hints and quadrants. These images can be activated or deactivated within the other scripts in the application.
+
+- The [DialogInfo.cs](Assets/Scripts/DialogInfo.cs) script allows the automatic generation of wizard button game objects drawn around a central point. The position of each button and the behaviors each button triggers can be easily edited in the Unity Inspector. We use this script in every puzzle piece, hint and quadrant so that the wizard can quickly react to events in MagPuzzle and trigger robot's behaviors that target those elements (changes the robot's gaze and initiates a vocalization). This script is also associated to the PlayerUI and RobotUI, in which case the robot can talk about itself (e.g., to clarify role, to re-introduce himself or to simulate thinking) or directly to the user (e.g., to remind the object, provide reassurance, probe for engagement/help). In both these cases, the robot establishes gaze with the user.
 
 #### Gaze
-
+This game object contains two main scripts. It contains a [TcpClientGaze.cs](Assets/Scripts/TcpClientGaze.cs) that receives data from an [external gaze tracker](https://eyeware.tech/gazesense/) and communicates that information with the autonomous gaze behavior described in the robot section. Gaze information from the user also drawn in the interface. For this, we use the [gazeDrawing.cs](Assets/Scripts/GazeDrawing.cs) script to draw two lines from the user's eyes to the focused point in the interaction. When the system detects that the user is gazing at a point of our board or at the robot, the wizard becomes aware of where the user is looking at. If no gaze is detected, the line is transformed into two simple dots that represent the eyes. In this repository, we also provide the [python code](Python/GazeSenseCommunication.py) necessary to communicate between GazeSense and our TcpClientGaze. That code can be initialized before starting the interface or after as we constantly try to establish a connection with it.
 
 #### Wizard Management
+This game object contains two main scripts:
 
+- The [WizardManager.cs](Assets/Scripts/WizardManager.cs) script is responsible for creating the data structures that recognize and hold the MagPuzzle board state. It gets its data from the ARToolkit and processes that data to keep the state updated. It also responsible for initiating behaviors by issuing the appropriate behavior command in the Furhat  robot and by communicating with the autonomous gaze behavior to change the gaze target. Finally, this script also divides the interface into two separate screens, one containing the wizard interface and other with the feed of the camera being used by the ARToolkit.
 
-The interface is able to follow MagPuzzle pieces as they move and the wizard that is controlling it is able to guide users towards a target solution.
+- The [ReduceCognitiveLoad.cs](Assets/Scripts/ReduceCognitiveLoad.cs) is responsible for hiding or showing dialog options in the interface by only showing the appropriate interface options at the right time. It contains a brute force search algorithm that checks the board for a solution and for correct or incorrect board states. If the state is correct but a solution is not yet reached, hints are shown for possible squares. If the state is incorrect, a symbol in the interface changes from correct to incorrect and dialog options that reveal why the state is incorrect are drawn in the interface. This allows the wizard to always provide prompt and correct advice that guides users towards the correct solution of the task. Additionally, hardcoded rules are added to hide interface elements once they are not useful anymore.
 
-## Game Board
+Wizard Management also contains two additional game objects that serve as a placeholder:
 
-### Hardware
+- Behavior buttons - Our wizard interface allows the wizard to select buttons in the interface with the use of a mouse or touchscreen interface that are associated with a Dialog Act. These buttons have in their text label, the name of the dialog acts. The wizard interface is easily costumizable by adding [a prefab object](Assets/Resources/WizardButton.prefab) for any part in the interface for each desired button. The prefab and the corresponding buttons contain the [WizardButtonPressed.cs](Assets/Scripts/WizardButtonPressed.cs) script. This script gets a reference to and uses the Wizard Manager script described above to execute the selected dialog choice/act.
 
-
-## Furhat Connection
-
-## Logging
+- Session Control - For session control, some interface elements are present to control the condition of the study. These elements use a [Settings.cs](Assets/Scripts/Settings.cs) script that can either activate (Full Joint Attention condition) or disable (Control condition) the reactive layer of the [responsive gaze system](ResponsiveGaze.md) autonomous gaze system.

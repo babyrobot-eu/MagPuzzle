@@ -5,9 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum MagPuzzleGameState { InitialRound, Max4Round, Max3Round, Max2Round }
-
-public class MagPuzzleManager : MonoBehaviour {
+public class ReduceCognitiveLoad : MonoBehaviour {
     private const string CORRECT_NEW_STATE = "CORRECT_NEW_STATE";
     private const string INCORRECT_NEW_STATE = "INCORRECT_NEW_STATE";
     private const string BROKEN_RULE_MAX2 = "BROKEN_RULE_MAX2";
@@ -51,7 +49,7 @@ public class MagPuzzleManager : MonoBehaviour {
         RuleConnected.SetActive(false);
     }
 
-    public static MagPuzzleManager Instance;
+    public static ReduceCognitiveLoad Instance;
 
     //Breaking Rules 
     public GameObject RuleMax4;

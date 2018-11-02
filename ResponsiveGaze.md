@@ -1,1 +1,1 @@
-# Responsive Gaze System
+# Responsive Autonomous Joint Attention System
