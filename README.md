@@ -11,3 +11,9 @@ This application was designed and developed to study the effects of **responsive
 This repository contains different two different systems that are integrated in the MagPuzzle application.
 1. [A perception restricted wizard interface for the MagPuzzle scenario.](Wizard.md)
 2. [An autonomous responsive joint attention system.](ResponsiveGaze.md)
+
+## Hardware
+This application requires a set of magnetic puzzle pieces, a webcamera mounted on top of the MagPuzzle Board, and a camera compatible with GazeSense. We also recommend using a dual monitor setup for the wizard station.
+
+## Additional Information
+Please contact me in GitHub for more details about the Hardware setup or about any question regarding this repository.
